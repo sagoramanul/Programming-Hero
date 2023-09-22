@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/getElementByClass.css">
+    <title>Get element By class</title>
+</head>
+<body>
+    <div class="section">
+        <div class="row">
+            <h3>Exploring DOM</h3>
+            <article>
+                <h3 id="firstArticle">article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo culpa rerum, placeat aliquam facere magnam sed et, omnis animi consectetur perferendis eius ullam, corrupti praesentium quasi error. Ratione, quis quam.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Odit tenetur cumque aliquam fugiat! Voluptatum eum culpa non adipisci distinctio eligendi error voluptate minima tenetur maiores, nulla eaque quis numquam consequatur sunt aut, nam animi. Beatae reiciendis repellendus accusamus.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Quod corporis provident quos maiores doloribus? Facilis quae illo laboriosam minus harum. Vitae libero, modi ab sunt corrupti voluptatem officiis magnam incidunt, esse doloribus recusandae, accusantium nesciunt labore rerum impedit!</p>
+            </article>
+
+        </div>
+    </div>
+
+    <script>
+        var articles = document.getElementById('firstArticle');
+        var newParagraph = document.createElement('p');
+        newParagraph.innerHTML = "Hello world I learned javascript, Now learn the DOM. This is add by JAVASCRIPT";
+        articles.appendChild(newParagraph);
+    </script>
+</body>
+</html>
