@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Company</title>
+</head>
+<body>
+    <h1>Exploring Event</h1>
+    <button onclick="alert(588)">Click me</button>
+
+    <button id ="select0";>click 0</button>
+    <button id ="select1";>click 1</button>
+    <button id ="select2";>click 2</button>
+
+
+
+
+
+
+
+
+    <script>
+        const select0btn = document.getElementById('select0');
+        select0btn.onclick = function(){
+            console.log('Second Person click');
+        }
+
+
+        function handleclick(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        const select2btn = document.getElementById('select2');
+        select2btn.onclick = handleclick;
+
+    </script>
+</body>
+</html>
