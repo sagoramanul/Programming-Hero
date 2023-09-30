@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id = 'first'; class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Quia, reiciendis voluptatibus!</li>
+            <li class="item">Illo, nam temporibus?</li>
+            <li class="item">Nisi, iure nam?</li>
+            <li class="item">Nobis, deleniti? Quos?</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('first').addEventListener('click', function(Event){
+            console.log('first item click');
+            event.stopPropagation();
+        })
+
+        document.getElementById('container').addEventListener('click', function(Event){
+            console.log('Container item click');
+            
+        })
+    </script>
+</body>
+</html>

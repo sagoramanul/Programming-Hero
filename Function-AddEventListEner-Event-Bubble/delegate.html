@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id = 'first'; class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Quia, reiciendis voluptatibus!</li>
+            <li class="item">Illo, nam temporibus?</li>
+            <li class="item">Nisi, iure nam?</li>
+            <li class="item">Nobis, deleniti? Quos?</li>
+        </ul>
+        <button id="addNew">Add New Item</button>
+    </div>
+
+    <script>
+        let items = document.getElementsByClassName('item');
+        for (let i = 0; i < items.length; i++) {
+            const itemss = items [i];
+            itemss.addEventListener('click', function(event){
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+
+        document.getElementById('addNew').addEventListener('click', function(event){
+            let itemParents = document.getElementById('myList');
+            let newItem = document.createElement('li');
+            newItem.innerHTML = 'Brand New Item';
+            itemParents.appendChild(newItem);
+        })
+    </script>
+</body>
+</html>
