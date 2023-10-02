@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <section class="login-page-section">
+        <section id="login-area" class="login-area-section">
             <div class="row">
 
                 <div class="col-md-2">
@@ -33,13 +33,75 @@
 
             </div>
         </section>
+
+
+        <section id="transection-area" class="transection-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="transection-content">
+
+                        <h1 class="text-center transection-head">Transection Area</h1>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="deposit box-status">
+                                    <h5>Deposit</h5>
+                                    <h2>$00</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="withdraw box-status">
+                                    <h5>Withdraw</h5>
+                                    <h2>$00</h2>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="balance box-status">
+                                    <h5>Balance</h5>
+                                    <h2>$00</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row money-transfer">
+                            <div class="col-md-6">
+                                <div class="submit-area">
+                                    <h2>Deposit</h2>
+                                    <input class="form-control" type="number" placeholder="$ ammount you want to deposit"><br>
+                                    <input id="login" class="btn btn-success" type="button" value="Deposit">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="submit-area">
+                                    <h2>Withdraw</h2>
+                                    <input class="form-control" type="number" placeholder="$ ammount you want to withdraw"><br>
+                                    <input id="login" class="btn btn-success" type="button" value="Withdraw">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <script>
+        //login button event handler
         const loginBtn = document.getElementById("login");
         loginBtn.addEventListener("click", function(){
-            console.log("click porse");
+            const logArea = document.getElementById("login-area");
+            logArea.style.display = "none";
+
+            const transectionArea = document.getElementById("transection-area");
+            transectionArea.style.display = "block";
         })
+
+        //deposit button event handler
+
+        //withdraw button event handler
     </script>
 </body>
 </html>
