@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Payoneer Bank</title>
+</head>
+<body>
+    <div class="container">
+        <section class="login-page-section">
+            <div class="row">
+
+                <div class="col-md-2">
+                </div>
+
+                <div class="col-md-8">
+                    <h1 class="text-center">Welcome To Payoneer</h1>
+
+                    <div class="submit-area">
+                        <h4>Login</h4>
+                        <input class="form-control" type="email" placeholder="Email"> <br>
+                        <input class="form-control" type="password" placeholder="Password"> <br>
+                        <input id="login" class="btn btn-success" type="button" value="Enter">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById("login");
+        loginBtn.addEventListener("click", function(){
+            console.log("click porse");
+        })
+    </script>
+</body>
+</html>
