@@ -7,7 +7,7 @@ numbers [1] = 88;
 numbers.push(12);
 console.log(numbers);
 
-const nayok = {name: "Sharukh khan", Phone: 01689056023, }
+const nayok = {name: "Sharukh khan", Phone: "01689056023"};
 console.log(nayok);
 
 
