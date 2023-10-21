@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json post data on server</title>
+</head>
+<body>
+    <h1>JSON Placeholder- Free fake rest API</h1>
+    <h2>Post data on server from my site</h2>
+
+    <input id="titleContent" type="text" placeholder="title"><br>
+    <input id="bodyContent" type="text" placeholder="body"><br>
+    <button id="clickButton">Submit</button>
+</body>
+
+<script>
+    document.getElementById("clickButton").addEventListener("click", function(){
+        const titleInfo = document.getElementById("titleContent").value;
+        const bodyInfo = document.getElementById("bodyContent").value;
+        const post = {title:titleInfo, body:bodyInfo}
+        nowPostToServer(post);
+    });
+
+    function nowPostToServer(PostInfo){
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify(postInfo),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
+
+    //const postInfo = {title: 'foooooooooooo', body: 'barrrrrrrrrr', userId: 1,}
+
+    // fetch('https://jsonplaceholder.typicode.com/posts', {
+    //     method: 'POST',
+    //     body: JSON.stringify(postInfo),
+    //     headers: {
+    //         'Content-type': 'application/json; charset=UTF-8',
+    //     },
+    //     })
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data));
+    
+</script>
+</html>
